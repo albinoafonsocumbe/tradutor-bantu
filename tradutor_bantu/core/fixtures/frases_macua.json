@@ -1,0 +1,22 @@
+[
+  {"model": "core.frase", "pk": 11, "fields": {"frase_original": "Bom dia.",              "frase_traduzida": "Habari chochisu.",         "idioma_destino": 3, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 12, "fields": {"frase_original": "Boa tarde.",            "frase_traduzida": "Habari chotana.",          "idioma_destino": 3, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 13, "fields": {"frase_original": "Boa noite.",            "frase_traduzida": "Habari chochochilo.",      "idioma_destino": 3, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 14, "fields": {"frase_original": "Como estás?",           "frase_traduzida": "Nerachani?",              "idioma_destino": 3, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 15, "fields": {"frase_original": "Estou bem.",            "frase_traduzida": "Kirisalama.",             "idioma_destino": 3, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 16, "fields": {"frase_original": "Obrigado.",             "frase_traduzida": "Asante.",                 "idioma_destino": 3, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 17, "fields": {"frase_original": "De nada.",              "frase_traduzida": "Karibu totoni.",          "idioma_destino": 3, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 18, "fields": {"frase_original": "Desculpa.",             "frase_traduzida": "Kinowombani samahani.",   "idioma_destino": 3, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 19, "fields": {"frase_original": "Não entendo.",          "frase_traduzida": "Kakinoelewa.",            "idioma_destino": 3, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 20, "fields": {"frase_original": "Não sei.",              "frase_traduzida": "Kakichuwele.",            "idioma_destino": 3, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 21, "fields": {"frase_original": "Qual é o teu nome?",   "frase_traduzida": "China ninyu apani?",      "idioma_destino": 3, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 22, "fields": {"frase_original": "Onde moras?",           "frase_traduzida": "Nokaravai?",             "idioma_destino": 3, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 23, "fields": {"frase_original": "Quanto custa?",         "frase_traduzida": "Yera shingapi?",         "idioma_destino": 3, "categoria": "comercio"}},
+  {"model": "core.frase", "pk": 24, "fields": {"frase_original": "Preciso de ajuda.",     "frase_traduzida": "Tafadhali nkisaidie.",   "idioma_destino": 3, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 25, "fields": {"frase_original": "Onde fica a escola?",  "frase_traduzida": "Shule iko wapi?",        "idioma_destino": 3, "categoria": "educacao"}},
+  {"model": "core.frase", "pk": 26, "fields": {"frase_original": "Está tudo bem?",        "frase_traduzida": "Ndisalama?",             "idioma_destino": 3, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 27, "fields": {"frase_original": "Chama a polícia.",      "frase_traduzida": "Mwite polisi.",          "idioma_destino": 3, "categoria": "emergencia"}},
+  {"model": "core.frase", "pk": 28, "fields": {"frase_original": "Onde dói?",             "frase_traduzida": "Inauma wapi?",           "idioma_destino": 3, "categoria": "saude"}},
+  {"model": "core.frase", "pk": 29, "fields": {"frase_original": "Tenho febre.",          "frase_traduzida": "Nina homa.",             "idioma_destino": 3, "categoria": "saude"}},
+  {"model": "core.frase", "pk": 30, "fields": {"frase_original": "Até amanhã.",           "frase_traduzida": "Niwonana mero.",         "idioma_destino": 3, "categoria": "saudacao"}}
+]

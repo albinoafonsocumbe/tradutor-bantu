@@ -1,0 +1,12 @@
+[
+  {"model": "core.frase", "pk": 1,  "fields": {"frase_original": "Onde dói?",                    "frase_traduzida": "Ku vava kwihi?",              "idioma_destino": 2, "categoria": "saude"}},
+  {"model": "core.frase", "pk": 2,  "fields": {"frase_original": "Há quanto tempo sente dor?",   "frase_traduzida": "U vava ku sukela nkarhi muni?","idioma_destino": 2, "categoria": "saude"}},
+  {"model": "core.frase", "pk": 3,  "fields": {"frase_original": "Tome este medicamento.",       "frase_traduzida": "Teka murhi lowu.",             "idioma_destino": 2, "categoria": "saude"}},
+  {"model": "core.frase", "pk": 4,  "fields": {"frase_original": "Bom dia.",                     "frase_traduzida": "Xewani.",                     "idioma_destino": 2, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 5,  "fields": {"frase_original": "Como se chama?",               "frase_traduzida": "Vito ra wena i mani?",        "idioma_destino": 2, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 6,  "fields": {"frase_original": "Quanto custa?",                "frase_traduzida": "I malamu mangani?",           "idioma_destino": 2, "categoria": "comercio"}},
+  {"model": "core.frase", "pk": 7,  "fields": {"frase_original": "Onde fica a escola?",          "frase_traduzida": "Xikolo xi kwihi?",            "idioma_destino": 2, "categoria": "educacao"}},
+  {"model": "core.frase", "pk": 8,  "fields": {"frase_original": "Preciso de ajuda.",            "frase_traduzida": "Ndzi lava pfuneto.",          "idioma_destino": 2, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 9,  "fields": {"frase_original": "Chame a polícia.",             "frase_traduzida": "Vitana maphorisa.",           "idioma_destino": 2, "categoria": "emergencia"}},
+  {"model": "core.frase", "pk": 10, "fields": {"frase_original": "Não entendo.",                 "frase_traduzida": "A ndzi twisisi.",             "idioma_destino": 2, "categoria": "geral"}}
+]

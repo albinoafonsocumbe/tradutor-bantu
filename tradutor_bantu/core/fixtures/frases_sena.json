@@ -1,0 +1,22 @@
+[
+  {"model": "core.frase", "pk": 31, "fields": {"frase_original": "Bom dia.",              "frase_traduzida": "Mwakabuka bwino.",        "idioma_destino": 4, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 32, "fields": {"frase_original": "Boa tarde.",            "frase_traduzida": "Mwaswera bwino.",         "idioma_destino": 4, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 33, "fields": {"frase_original": "Boa noite.",            "frase_traduzida": "Mwagona bwino.",          "idioma_destino": 4, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 34, "fields": {"frase_original": "Como estás?",           "frase_traduzida": "Muli bwanji?",           "idioma_destino": 4, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 35, "fields": {"frase_original": "Estou bem.",            "frase_traduzida": "Ndiri bwino.",           "idioma_destino": 4, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 36, "fields": {"frase_original": "Obrigado.",             "frase_traduzida": "Zikomo.",                "idioma_destino": 4, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 37, "fields": {"frase_original": "De nada.",              "frase_traduzida": "Palibe kanthu.",         "idioma_destino": 4, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 38, "fields": {"frase_original": "Desculpa.",             "frase_traduzida": "Ndikukhululukani.",      "idioma_destino": 4, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 39, "fields": {"frase_original": "Não entendo.",          "frase_traduzida": "Sindimvetsa.",           "idioma_destino": 4, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 40, "fields": {"frase_original": "Não sei.",              "frase_traduzida": "Sindikudziwa.",          "idioma_destino": 4, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 41, "fields": {"frase_original": "Qual é o teu nome?",   "frase_traduzida": "Dzina lako ndani?",      "idioma_destino": 4, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 42, "fields": {"frase_original": "Quanto custa?",         "frase_traduzida": "Ndi ndalama zingati?",  "idioma_destino": 4, "categoria": "comercio"}},
+  {"model": "core.frase", "pk": 43, "fields": {"frase_original": "Preciso de ajuda.",     "frase_traduzida": "Ndifuna thandizo.",      "idioma_destino": 4, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 44, "fields": {"frase_original": "Onde dói?",             "frase_traduzida": "Zimakupweteka kuti?",   "idioma_destino": 4, "categoria": "saude"}},
+  {"model": "core.frase", "pk": 45, "fields": {"frase_original": "Tenho febre.",          "frase_traduzida": "Ndili ndi malungo.",     "idioma_destino": 4, "categoria": "saude"}},
+  {"model": "core.frase", "pk": 46, "fields": {"frase_original": "Chama a polícia.",      "frase_traduzida": "Itanani apolisi.",       "idioma_destino": 4, "categoria": "emergencia"}},
+  {"model": "core.frase", "pk": 47, "fields": {"frase_original": "Onde fica a escola?",  "frase_traduzida": "Sukulu ili kuti?",       "idioma_destino": 4, "categoria": "educacao"}},
+  {"model": "core.frase", "pk": 48, "fields": {"frase_original": "Até amanhã.",           "frase_traduzida": "Mpaka mawa.",            "idioma_destino": 4, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 49, "fields": {"frase_original": "Está tudo bem?",        "frase_traduzida": "Ziri bwino?",            "idioma_destino": 4, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 50, "fields": {"frase_original": "Tome este medicamento.","frase_traduzida": "Mwamwa mankhwala awa.",  "idioma_destino": 4, "categoria": "saude"}}
+]

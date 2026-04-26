@@ -1,0 +1,24 @@
+[
+  {"model": "core.frase", "pk": 66, "fields": {"frase_original": "Bom dia.",              "frase_traduzida": "Mwakabuka.",             "idioma_destino": 6, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 67, "fields": {"frase_original": "Como estás?",           "frase_traduzida": "Muli uli?",             "idioma_destino": 6, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 68, "fields": {"frase_original": "Estou bem.",            "frase_traduzida": "Nili bwino.",           "idioma_destino": 6, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 69, "fields": {"frase_original": "Obrigado.",             "frase_traduzida": "Zikomo.",               "idioma_destino": 6, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 70, "fields": {"frase_original": "Não entendo.",          "frase_traduzida": "Sindimvetsa.",          "idioma_destino": 6, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 71, "fields": {"frase_original": "Preciso de ajuda.",     "frase_traduzida": "Nifuna thandizo.",      "idioma_destino": 6, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 72, "fields": {"frase_original": "Quanto custa?",         "frase_traduzida": "Ndalama zingati?",      "idioma_destino": 6, "categoria": "comercio"}},
+
+  {"model": "core.frase", "pk": 73, "fields": {"frase_original": "Bom dia.",              "frase_traduzida": "Bom dia mwana.",        "idioma_destino": 7, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 74, "fields": {"frase_original": "Como estás?",           "frase_traduzida": "Uli uli?",              "idioma_destino": 7, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 75, "fields": {"frase_original": "Estou bem.",            "frase_traduzida": "Nili bwino.",           "idioma_destino": 7, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 76, "fields": {"frase_original": "Obrigado.",             "frase_traduzida": "Zikomo kwambiri.",      "idioma_destino": 7, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 77, "fields": {"frase_original": "Não entendo.",          "frase_traduzida": "Sindimvetsa bwino.",    "idioma_destino": 7, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 78, "fields": {"frase_original": "Preciso de ajuda.",     "frase_traduzida": "Ndifuna thandizo.",     "idioma_destino": 7, "categoria": "geral"}},
+
+  {"model": "core.frase", "pk": 79, "fields": {"frase_original": "Bom dia.",              "frase_traduzida": "Sibalala.",             "idioma_destino": 9, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 80, "fields": {"frase_original": "Como estás?",           "frase_traduzida": "Uli uli?",              "idioma_destino": 9, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 81, "fields": {"frase_original": "Estou bem.",            "frase_traduzida": "Nili msangafu.",        "idioma_destino": 9, "categoria": "saudacao"}},
+  {"model": "core.frase", "pk": 82, "fields": {"frase_original": "Obrigado.",             "frase_traduzida": "Zikomo.",               "idioma_destino": 9, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 83, "fields": {"frase_original": "Não entendo.",          "frase_traduzida": "Sindimvetsa.",          "idioma_destino": 9, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 84, "fields": {"frase_original": "Preciso de ajuda.",     "frase_traduzida": "Nifuna thandizo.",      "idioma_destino": 9, "categoria": "geral"}},
+  {"model": "core.frase", "pk": 85, "fields": {"frase_original": "Quanto custa?",         "frase_traduzida": "Ndalama zingati?",      "idioma_destino": 9, "categoria": "comercio"}}
+]

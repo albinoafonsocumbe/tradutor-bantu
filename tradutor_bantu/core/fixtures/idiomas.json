@@ -1,0 +1,11 @@
+[
+  {"model": "core.idioma", "pk": 1, "fields": {"nome": "Português",  "codigo": "pt"}},
+  {"model": "core.idioma", "pk": 2, "fields": {"nome": "Changana",   "codigo": "ts"}},
+  {"model": "core.idioma", "pk": 3, "fields": {"nome": "Macua",      "codigo": "mgh"}},
+  {"model": "core.idioma", "pk": 4, "fields": {"nome": "Sena",       "codigo": "seh"}},
+  {"model": "core.idioma", "pk": 5, "fields": {"nome": "Ndau",       "codigo": "ndc"}},
+  {"model": "core.idioma", "pk": 6, "fields": {"nome": "Lomwe",      "codigo": "ngl"}},
+  {"model": "core.idioma", "pk": 7, "fields": {"nome": "Chuabo",     "codigo": "chw"}},
+  {"model": "core.idioma", "pk": 8, "fields": {"nome": "Makonde",    "codigo": "kde"}},
+  {"model": "core.idioma", "pk": 9, "fields": {"nome": "Yao",        "codigo": "yao"}}
+]

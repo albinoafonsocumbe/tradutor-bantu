@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.env
+venv/
+env/
+*.egg-info/
+
+# Django
+db.sqlite3
+*.log
+media/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Credenciais — não subir para o GitHub
+tradutor_bantu/tradutor_bantu_backend/settings.py

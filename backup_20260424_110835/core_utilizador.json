@@ -1,0 +1,21 @@
+[
+{
+  "model": "core.utilizador",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$WaXrKAEqaHqNdtYuPayKEA$JsCtGrrhSIaPfcsMdwI/mLUKfOLrtrGgk9bogfQl1Uw=",
+    "last_login": "2026-04-24T07:59:27.912Z",
+    "is_superuser": true,
+    "username": "albino",
+    "first_name": "",
+    "last_name": "",
+    "email": "albinoafonsocumbe8687@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-12T17:04:28.171Z",
+    "idioma_preferido": null,
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

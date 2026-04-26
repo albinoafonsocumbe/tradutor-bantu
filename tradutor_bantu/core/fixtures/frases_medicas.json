@@ -1,0 +1,12 @@
+[
+  {"model": "core.frasemedica", "pk": 1,  "fields": {"frase_original": "Onde dói?",                    "frase_traduzida": "Ku vava kwihi?",              "idioma_destino": 2, "categoria": "consulta"}},
+  {"model": "core.frasemedica", "pk": 2,  "fields": {"frase_original": "Há quanto tempo sente dor?",   "frase_traduzida": "U vava ku sukela nkarhi muni?","idioma_destino": 2, "categoria": "consulta"}},
+  {"model": "core.frasemedica", "pk": 3,  "fields": {"frase_original": "Tome este medicamento.",       "frase_traduzida": "Teka murhi lowu.",             "idioma_destino": 2, "categoria": "tratamento"}},
+  {"model": "core.frasemedica", "pk": 4,  "fields": {"frase_original": "Abra a boca.",                 "frase_traduzida": "Vula nomo.",                  "idioma_destino": 2, "categoria": "consulta"}},
+  {"model": "core.frasemedica", "pk": 5,  "fields": {"frase_original": "Respire fundo.",               "frase_traduzida": "Hema kahle.",                 "idioma_destino": 2, "categoria": "consulta"}},
+  {"model": "core.frasemedica", "pk": 6,  "fields": {"frase_original": "Tem febre?",                   "frase_traduzida": "U na fibre?",                 "idioma_destino": 2, "categoria": "triagem"}},
+  {"model": "core.frasemedica", "pk": 7,  "fields": {"frase_original": "Está grávida?",                "frase_traduzida": "U na mimba?",                 "idioma_destino": 2, "categoria": "triagem"}},
+  {"model": "core.frasemedica", "pk": 8,  "fields": {"frase_original": "Chame a enfermeira.",          "frase_traduzida": "Vitana nharhi.",              "idioma_destino": 2, "categoria": "geral"}},
+  {"model": "core.frasemedica", "pk": 9,  "fields": {"frase_original": "Precisa de cirurgia.",         "frase_traduzida": "U lava operasaun.",           "idioma_destino": 2, "categoria": "tratamento"}},
+  {"model": "core.frasemedica", "pk": 10, "fields": {"frase_original": "Não se preocupe.",             "frase_traduzida": "U tshuki ku chavela.",        "idioma_destino": 2, "categoria": "geral"}}
+]

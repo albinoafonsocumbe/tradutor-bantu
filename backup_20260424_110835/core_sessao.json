@@ -1,0 +1,162 @@
+[
+{
+  "model": "core.sessao",
+  "pk": 1,
+  "fields": {
+    "utilizador": null,
+    "idioma_falante": 2,
+    "data_inicio": "2026-04-12T18:18:03.436Z",
+    "transcricao": [
+      {
+        "autor": "medico",
+        "texto": "Onde dói?",
+        "traducao": "Ku vava kwihi?"
+      }
+    ]
+  }
+},
+{
+  "model": "core.sessao",
+  "pk": 2,
+  "fields": {
+    "utilizador": null,
+    "idioma_falante": 2,
+    "data_inicio": "2026-04-12T18:27:04.008Z",
+    "transcricao": [
+      {
+        "autor": "medico",
+        "texto": "Onde dói?",
+        "traducao": "Ku vava kwihi?"
+      }
+    ]
+  }
+},
+{
+  "model": "core.sessao",
+  "pk": 3,
+  "fields": {
+    "utilizador": null,
+    "idioma_falante": 2,
+    "data_inicio": "2026-04-12T18:27:40.795Z",
+    "transcricao": [
+      {
+        "autor": "medico",
+        "texto": "Onde dói?",
+        "traducao": "Ku vava kwihi?"
+      }
+    ]
+  }
+},
+{
+  "model": "core.sessao",
+  "pk": 4,
+  "fields": {
+    "utilizador": null,
+    "idioma_falante": 2,
+    "data_inicio": "2026-04-12T18:37:43.621Z",
+    "transcricao": [
+      {
+        "autor": "medico",
+        "texto": "Onde dói?",
+        "traducao": "Ku vava kwihi?"
+      }
+    ]
+  }
+},
+{
+  "model": "core.sessao",
+  "pk": 5,
+  "fields": {
+    "utilizador": null,
+    "idioma_falante": 2,
+    "data_inicio": "2026-04-12T18:41:03.169Z",
+    "transcricao": [
+      {
+        "autor": "medico",
+        "texto": "Onde dói?",
+        "traducao": "Ku vava kwihi?"
+      }
+    ]
+  }
+},
+{
+  "model": "core.sessao",
+  "pk": 6,
+  "fields": {
+    "utilizador": null,
+    "idioma_falante": 2,
+    "data_inicio": "2026-04-12T18:45:00.561Z",
+    "transcricao": [
+      {
+        "autor": "medico",
+        "texto": "Onde dói?",
+        "traducao": "Ku vava kwihi?"
+      }
+    ]
+  }
+},
+{
+  "model": "core.sessao",
+  "pk": 7,
+  "fields": {
+    "utilizador": null,
+    "idioma_falante": 2,
+    "data_inicio": "2026-04-12T18:48:00.899Z",
+    "transcricao": [
+      {
+        "autor": "medico",
+        "texto": "Onde dói?",
+        "traducao": "Ku vava kwihi?"
+      }
+    ]
+  }
+},
+{
+  "model": "core.sessao",
+  "pk": 8,
+  "fields": {
+    "utilizador": null,
+    "idioma_falante": 2,
+    "data_inicio": "2026-04-12T18:49:25.740Z",
+    "transcricao": [
+      {
+        "autor": "medico",
+        "texto": "Onde dói?",
+        "traducao": "Ku vava kwihi?"
+      }
+    ]
+  }
+},
+{
+  "model": "core.sessao",
+  "pk": 9,
+  "fields": {
+    "utilizador": null,
+    "idioma_falante": 2,
+    "data_inicio": "2026-04-12T18:52:21.032Z",
+    "transcricao": [
+      {
+        "autor": "medico",
+        "texto": "Onde dói?",
+        "traducao": "Ku vava kwihi?"
+      }
+    ]
+  }
+},
+{
+  "model": "core.sessao",
+  "pk": 10,
+  "fields": {
+    "utilizador": null,
+    "idioma_falante": 2,
+    "data_inicio": "2026-04-12T19:06:34.934Z",
+    "transcricao": [
+      {
+        "autor": "medico",
+        "texto": "Onde dói?",
+        "traducao": "Ku vava kwihi?"
+      }
+    ]
+  }
+}
+]
