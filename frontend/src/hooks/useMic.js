@@ -3,7 +3,7 @@
  * Capta voz normal sem precisar de falar alto
  */
 
-const BASE = 'http://127.0.0.1:8001/api';
+const BASE = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:8001') + '/api';
 const SAMPLE_RATE = 16000;
 
 function pcmToWav(samples, sampleRate) {

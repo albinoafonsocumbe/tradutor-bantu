@@ -40,7 +40,7 @@ export default function ModoPrincipal({ idiomas }) {
         fd.append('idioma_origem', origem);
         fd.append('idioma_destino', destino);
         try {
-          const r = await fetch('http://127.0.0.1:8001/api/voz/transcrever/', { method: 'POST', body: fd });
+          const r = await fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8001'}/api/voz/transcrever/`, { method: 'POST', body: fd });
           const d = await r.json();
           if (d.texto_original) { setTexto(d.texto_original); traduzir(d.texto_original); }
         } catch {}

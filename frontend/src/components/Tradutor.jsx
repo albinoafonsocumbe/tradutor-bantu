@@ -58,7 +58,7 @@ export default function Tradutor({ idiomas }) {
 
   // Testar servidor directamente (nao usar navigator.onLine que e pouco fiavel)
   useEffect(() => {
-    const testar = () => fetch('http://127.0.0.1:8001/api/idiomas/', { method: 'HEAD' })
+    const testar = () => fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8001'}/api/idiomas/`, { method: 'HEAD' })
       .then(() => setOnline(true)).catch(() => setOnline(false));
     testar();
     const id = setInterval(testar, 15000);

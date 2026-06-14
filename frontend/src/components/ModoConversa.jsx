@@ -1,7 +1,7 @@
 import { useRef, useEffect, useCallback, useState } from 'react';
 import { traduzirTexto } from '../api';
 
-const BASE = 'http://127.0.0.1:8001/api';
+const BASE = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:8001') + '/api';
 const VOZ_MAP = { pt:'pt-PT', ts:'pt-PT', mgh:'pt-PT', seh:'pt-PT', ndc:'pt-PT', ngl:'pt-PT', chw:'pt-PT', kde:'sw', yao:'pt-PT' };
 const gradA = 'linear-gradient(135deg,#4f46e5,#7c3aed)';
 const gradB = 'linear-gradient(135deg,#059669,#10b981)';

@@ -71,7 +71,7 @@ const MicButton = memo(function MicButton({ onTranscricao, orig, dest }) {
         fd.append("idioma_destino", stateRef.dest);
 
         try {
-          const r = await fetch("http://127.0.0.1:8001/api/voz/transcrever/", {
+          const r = await fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8001'}/api/voz/transcrever/`, {
             method: "POST",
             body: fd,
           });

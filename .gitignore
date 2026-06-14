@@ -22,5 +22,7 @@ frontend/.vite/
 .DS_Store
 Thumbs.db
 
-# Credenciais — não subir para o GitHub
-tradutor_bantu/tradutor_bantu_backend/settings.py
+# Ficheiros de ambiente local — não subir para o GitHub
+.env
+.env.local
+*.env.local

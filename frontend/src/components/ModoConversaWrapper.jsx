@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { traduzirTexto } from '../api';
 import BotaoSegurarFalar from './BotaoSegurarFalar';
 
-const BASE = 'http://127.0.0.1:8001/api';
+const BASE = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:8001') + '/api';
 
 const C = {
   orange: '#e07b2a',

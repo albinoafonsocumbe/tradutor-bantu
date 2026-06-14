@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 
-const BASE = 'http://127.0.0.1:8001/api';
+const BASE = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:8001') + '/api';
 
 export default function BotaoGravar({ grad, cor, idOrigRef, idDestRef, onMensagem }) {
   const [gravando, setGravando] = useState(false);

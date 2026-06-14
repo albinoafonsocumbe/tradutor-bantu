@@ -17,7 +17,7 @@ export default function BotaoVoz({ idiomaId, onTranscricao }) {
         fd.append('idioma_origem', idiomaId);
         fd.append('idioma_destino', idiomaId);
         try {
-          const r = await fetch('http://127.0.0.1:8001/api/voz/transcrever/', { method: 'POST', body: fd });
+          const r = await fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8001'}/api/voz/transcrever/`, { method: 'POST', body: fd });
           const d = await r.json();
           if (d.texto_original) onTranscricao(d.texto_original);
         } catch {}
