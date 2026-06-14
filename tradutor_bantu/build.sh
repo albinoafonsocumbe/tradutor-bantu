@@ -3,20 +3,35 @@
 
 set -o errexit   # para se houver erro
 
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+# Verificar que DATABASE_URL esta definida
+if [ -z "$DATABASE_URL" ]; then
+  echo "ERRO: A variavel DATABASE_URL nao esta definida!"
+  echo "No Render, vai a: Environment Variables -> Add Environment Variable"
+  echo "Chave: DATABASE_URL"
+  echo "Valor: a connection string do Neon (postgresql://...)"
+  exit 1
+fi
 
-# Recolher ficheiros estáticos
+echo "==> DATABASE_URL detectada: ${DATABASE_URL:0:40}..."
+
+pip install --upgrade pip
+pip install -r requirements.txt
+
+# Recolher ficheiros estaticos
+echo "==> A recolher ficheiros estaticos..."
 python manage.py collectstatic --no-input
 
-# Aplicar migrações
-python manage.py migrate
+# Aplicar migracoes
+echo "==> A aplicar migracoes..."
+python manage.py migrate --no-input
 
-# Carregar dados iniciais (só se a tabela de idiomas estiver vazia)
+# Carregar dados iniciais (so se a tabela de idiomas estiver vazia)
+echo "==> A verificar dados iniciais..."
 python manage.py shell -c "
 from core.models import Idioma
-if Idioma.objects.count() == 0:
-    import subprocess
+count = Idioma.objects.count()
+if count == 0:
+    import subprocess, sys
     fixtures = [
         'core/fixtures/idiomas.json',
         'core/fixtures/frases.json',
@@ -28,11 +43,13 @@ if Idioma.objects.count() == 0:
     ]
     for f in fixtures:
         try:
-            subprocess.run(['python', 'manage.py', 'loaddata', f], check=True)
-            print(f'Carregado: {f}')
+            subprocess.run([sys.executable, 'manage.py', 'loaddata', f], check=True)
+            print(f'OK: {f}')
         except Exception as e:
             print(f'Aviso ao carregar {f}: {e}')
-    print('Dados iniciais carregados.')
+    print('Dados iniciais carregados com sucesso.')
 else:
-    print(f'Base de dados ja tem {Idioma.objects.count()} idiomas — sem carregar fixtures.')
+    print(f'Base de dados ja tem {count} idiomas — sem carregar fixtures.')
 "
+
+echo "==> Build concluido com sucesso!"
