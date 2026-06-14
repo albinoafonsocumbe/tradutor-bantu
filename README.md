@@ -17,7 +17,7 @@ Sistema de Comunicação Multilíngue em Tempo Real para as Línguas Bantu de Mo
 
 - Python 3.8+
 - Node.js 16+
-- PostgreSQL 12+
+- PostgreSQL 12+ 
 
 ### Backend (Django)
 

@@ -1,34 +1,58 @@
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes wave1 { 0%,100%{height:8px} 50%{height:24px} }
-@keyframes wave2 { 0%,100%{height:14px} 50%{height:8px} }
-@keyframes wave3 { 0%,100%{height:20px} 50%{height:6px} }
-@keyframes wave4 { 0%,100%{height:10px} 50%{height:22px} }
-@keyframes wave5 { 0%,100%{height:6px} 50%{height:18px} }
-@keyframes fadeInUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
-@keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
-@keyframes pulse-ring { 0%{transform:scale(0.8);opacity:0.6} 100%{transform:scale(1.5);opacity:0} }
-@keyframes mic-glow { 0%,100%{box-shadow:0 0 20px rgba(239,68,68,0.4)} 50%{box-shadow:0 0 40px rgba(239,68,68,0.8),0 0 60px rgba(239,68,68,0.3)} }
-
-.msg-anim { animation: fadeInUp 0.35s cubic-bezier(0.16,1,0.3,1); }
-
-.skeleton {
-  background: linear-gradient(90deg,rgba(255,255,255,0.04) 25%,rgba(255,255,255,0.09) 50%,rgba(255,255,255,0.04) 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-  border-radius: 8px;
+/* Efeito de press/sombra em todos os botoes */
+button {
+  position: relative;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.wave-bars { display:flex; align-items:center; gap:3px; height:28px; }
-.wave-bars span { width:4px; border-radius:2px; background:currentColor; }
-.wave-bars span:nth-child(1){animation:wave1 0.8s ease-in-out infinite}
-.wave-bars span:nth-child(2){animation:wave2 0.8s ease-in-out infinite 0.1s}
-.wave-bars span:nth-child(3){animation:wave3 0.8s ease-in-out infinite 0.2s}
-.wave-bars span:nth-child(4){animation:wave4 0.8s ease-in-out infinite 0.3s}
-.wave-bars span:nth-child(5){animation:wave5 0.8s ease-in-out infinite 0.4s}
+/* Ripple ao clicar */
+button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  border-radius: inherit;
+  pointer-events: none;
+}
 
-.pulse-ring { position:absolute; inset:-8px; border-radius:50%; border:2px solid currentColor; opacity:0; animation:pulse-ring 1.5s ease-out infinite; }
-.pulse-ring-2 { position:absolute; inset:-16px; border-radius:50%; border:2px solid currentColor; opacity:0; animation:pulse-ring 1.5s ease-out infinite 0.5s; }
+button:active::after {
+  opacity: 1;
+}
 
-.mic-recording { animation: mic-glow 1s ease-in-out infinite; }
-.copy-btn { transition:all 0.15s; cursor:pointer; }
-.copy-btn:active { transform:scale(0.88); }
+/* Scale down ao pressionar */
+button:active:not(:disabled) {
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
+}
+
+button:not(:active) {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Hover suave */
+button:hover:not(:disabled) {
+  filter: brightness(1.04);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* Animacoes globais */
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse-rec { 0%,100%{opacity:1} 50%{opacity:0.3} }
+@keyframes fadeInUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+
+/* Cards da home — hover com elevacao */
+.card-modo {
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+.card-modo:hover {
+  transform: translateY(-4px) !important;
+}
+.card-modo:active {
+  transform: translateY(-1px) scale(0.98) !important;
+}

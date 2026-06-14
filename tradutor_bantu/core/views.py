@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.http import FileResponse
 
-from .models import Idioma, Frase, Sessao
+from .models import Idioma, Frase, Sessao, CacheTraducao, HistoricoTraducao
 from .serializers import (
     IdiomaSerializer, FraseSerializer,
     SessaoSerializer, TraduzirInputSerializer,
@@ -44,12 +44,29 @@ class TraduzirView(APIView):
 
         try:
             resultado = traduzir_texto(texto, idioma_origem, idioma_destino)
+
+            # Guardar no histórico se tradução bem sucedida
+            sessao_key = request.headers.get('X-Session-Key', '')
+            if sessao_key and resultado.get('suportado'):
+                try:
+                    HistoricoTraducao.objects.create(
+                        sessao_key=sessao_key,
+                        texto_original=texto,
+                        texto_traduzido=resultado['traducao'],
+                        idioma_origem_id=idioma_origem,
+                        idioma_destino_id=idioma_destino,
+                        fonte=resultado.get('fonte', ''),
+                    )
+                except Exception:
+                    pass
+
             return Response({
                 'original':  texto,
                 'traducao':  resultado['traducao'],
                 'fonte':     resultado['fonte'],
                 'suportado': resultado.get('suportado', True),
                 'mensagem':  resultado.get('mensagem', ''),
+                'cache':     resultado.get('cache', False),
             })
         except Exception as e:
             logger.error(f'Erro ao traduzir: {e}')
@@ -74,18 +91,24 @@ class FraseListView(APIView):
 
 class VozTranscreverView(APIView):
     def post(self, request):
+        logger.info(f'[Voz] Recebido pedido de transcrição - idioma origem: {request.data.get("idioma_origem")}, destino: {request.data.get("idioma_destino")}')
+        
         serializer = VozInputSerializer(data=request.data)
         if not serializer.is_valid():
+            logger.error(f'[Voz] Serializer inválido: {serializer.errors}')
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         audio_file     = serializer.validated_data['audio']
         idioma_origem  = serializer.validated_data['idioma_origem']
         idioma_destino = serializer.validated_data['idioma_destino']
+        
+        logger.info(f'[Voz] Ficheiro recebido: {audio_file.name}, tamanho: {audio_file.size} bytes')
 
         try:
             texto = transcrever_audio(audio_file, idioma_origem)
+            logger.info(f'[Voz] Texto transcrito: "{texto}"')
         except Exception as e:
-            logger.error(f'Erro ao transcrever áudio: {e}')
+            logger.error(f'[Voz] Erro ao transcrever áudio: {e}')
             return Response({'erro': 'Erro ao processar áudio'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         if not texto:
@@ -171,3 +194,31 @@ class SessaoMensagemView(APIView):
         sessao.transcricao.append({'autor': autor, 'texto': texto, 'traducao': traducao})
         sessao.save()
         return Response(SessaoSerializer(sessao).data)
+
+
+class HistoricoView(APIView):
+    """Histórico de traduções por sessão de browser."""
+
+    def get(self, request):
+        sessao_key = request.headers.get('X-Session-Key', '')
+        if not sessao_key:
+            return Response([])
+        items = HistoricoTraducao.objects.filter(
+            sessao_key=sessao_key
+        ).select_related('idioma_origem', 'idioma_destino')[:50]
+        return Response([{
+            'id':       i.id,
+            'original': i.texto_original,
+            'traducao': i.texto_traduzido,
+            'origem':   i.idioma_origem.nome,
+            'destino':  i.idioma_destino.nome,
+            'fonte':    i.fonte,
+            'hora':     i.criado_em.strftime('%H:%M'),
+            'data':     i.criado_em.strftime('%d/%m/%Y'),
+        } for i in items])
+
+    def delete(self, request):
+        sessao_key = request.headers.get('X-Session-Key', '')
+        if sessao_key:
+            HistoricoTraducao.objects.filter(sessao_key=sessao_key).delete()
+        return Response({'ok': True})

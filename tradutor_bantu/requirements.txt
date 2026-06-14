@@ -6,3 +6,4 @@ gTTS
 pyaudio
 deep-translator
 requests
+pydub

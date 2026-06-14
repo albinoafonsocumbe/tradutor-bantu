@@ -52,7 +52,7 @@ class Frase(models.Model):
         ('geral',       'Geral'),
     ]
 
-    frase_original  = models.TextField()                          # sempre em Português
+    frase_original  = models.TextField()
     frase_traduzida = models.TextField()
     idioma_destino  = models.ForeignKey(Idioma, on_delete=models.CASCADE, related_name='frases')
     categoria       = models.CharField(max_length=20, choices=CATEGORIAS, default='geral')
@@ -64,6 +64,41 @@ class Frase(models.Model):
         verbose_name = "Frase"
         verbose_name_plural = "Frases"
         unique_together = ('frase_original', 'idioma_destino')
+
+
+class CacheTraducao(models.Model):
+    """Cache de traduções já feitas — evita chamadas repetidas ao Google/Bhala."""
+    texto_original  = models.TextField()
+    texto_traduzido = models.TextField()
+    idioma_origem   = models.ForeignKey(Idioma, on_delete=models.CASCADE, related_name='cache_origem')
+    idioma_destino  = models.ForeignKey(Idioma, on_delete=models.CASCADE, related_name='cache_destino')
+    fonte           = models.CharField(max_length=30, default='google_translate')
+    criado_em       = models.DateTimeField(auto_now_add=True)
+    usado_vezes     = models.PositiveIntegerField(default=1)
+
+    class Meta:
+        unique_together = ('texto_original', 'idioma_origem', 'idioma_destino')
+        ordering = ['-usado_vezes']
+
+    def __str__(self):
+        return f"{self.texto_original[:40]} → {self.texto_traduzido[:40]}"
+
+
+class HistoricoTraducao(models.Model):
+    """Histórico de traduções por sessão de browser."""
+    sessao_key      = models.CharField(max_length=64, db_index=True)  # ID anónimo do browser
+    texto_original  = models.TextField()
+    texto_traduzido = models.TextField()
+    idioma_origem   = models.ForeignKey(Idioma, on_delete=models.CASCADE, related_name='hist_origem')
+    idioma_destino  = models.ForeignKey(Idioma, on_delete=models.CASCADE, related_name='hist_destino')
+    fonte           = models.CharField(max_length=30)
+    criado_em       = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-criado_em']
+
+    def __str__(self):
+        return f"[{self.sessao_key[:8]}] {self.texto_original[:30]}"
 
 
 class Sessao(models.Model):

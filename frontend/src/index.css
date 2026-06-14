@@ -1,28 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
-:root {
-  --p1: #6366f1;
-  --p2: #8b5cf6;
-  --p3: #a78bfa;
-  --a1: #06b6d4;
-  --g1: #10b981;
-  --g2: #34d399;
-  --r1: #ef4444;
-  --bg: #09090b;
-  --bg2: #111113;
-  --bg3: #18181b;
-  --bg4: #27272a;
-  --border: rgba(255,255,255,0.07);
-  --border2: rgba(255,255,255,0.12);
-  --t1: #fafafa;
-  --t2: #a1a1aa;
-  --t3: #52525b;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-height:100vh;overflow-x:hidden}
+body{font-family:'Inter',sans-serif;background:#fdf6ec;color:#1a1a1a;min-height:100vh;overflow-x:hidden}
 button{font-family:inherit;cursor:pointer}
-input,textarea{font-family:inherit}
-::-webkit-scrollbar{width:3px}
-::-webkit-scrollbar-thumb{background:var(--p1);border-radius:2px}
+input,textarea,select{font-family:inherit}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-thumb{background:#e07b2a;border-radius:4px;opacity:0.5}
+
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes wave1{0%,100%{height:6px}50%{height:20px}}
+@keyframes wave2{0%,100%{height:12px}50%{height:6px}}
+@keyframes wave3{0%,100%{height:18px}50%{height:4px}}
+@keyframes wave4{0%,100%{height:8px}50%{height:18px}}
+@keyframes wave5{0%,100%{height:4px}50%{height:14px}}
+
+.msg-anim{animation:fadeInUp 0.3s cubic-bezier(0.16,1,0.3,1)}
+.wave-bars{display:flex;align-items:center;gap:3px;height:24px}
+.wave-bars span{width:3px;border-radius:2px;background:currentColor}
+.wave-bars span:nth-child(1){animation:wave1 0.8s ease-in-out infinite}
+.wave-bars span:nth-child(2){animation:wave2 0.8s ease-in-out infinite 0.1s}
+.wave-bars span:nth-child(3){animation:wave3 0.8s ease-in-out infinite 0.2s}
+.wave-bars span:nth-child(4){animation:wave4 0.8s ease-in-out infinite 0.3s}
+.wave-bars span:nth-child(5){animation:wave5 0.8s ease-in-out infinite 0.4s}

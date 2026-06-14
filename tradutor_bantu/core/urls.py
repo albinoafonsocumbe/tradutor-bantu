@@ -7,6 +7,7 @@ from .views import (
     VozFalarView,
     SessaoView,
     SessaoMensagemView,
+    HistoricoView,
 )
 
 urlpatterns = [
@@ -17,4 +18,5 @@ urlpatterns = [
     path('voz/falar/',                      VozFalarView.as_view(),        name='voz-falar'),
     path('sessao/',                         SessaoView.as_view(),          name='sessao'),
     path('sessao/<int:sessao_id>/mensagem/', SessaoMensagemView.as_view(), name='sessao-mensagem'),
+    path('historico/',                      HistoricoView.as_view(),       name='historico'),
 ]
