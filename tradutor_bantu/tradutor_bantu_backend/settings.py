@@ -70,7 +70,7 @@ if DATABASE_URL:
         'default': dj_database_url.config(
             default=DATABASE_URL,
             conn_max_age=600,
-            ssl_require=True,
+            ssl_require='neon.tech' in DATABASE_URL,  # SSL obrigatório no Neon
         )
     }
 else:
