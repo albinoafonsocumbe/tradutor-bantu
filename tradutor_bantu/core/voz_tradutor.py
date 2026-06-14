@@ -2,14 +2,13 @@
 Modulo de voz:
   - transcrever_audio: ficheiro de audio -> texto
   - falar_texto: texto -> ficheiro mp3
+
+Nota: speech_recognition importado de forma lazy para compatibilidade
+com Python 3.13+ (modulo 'aifc' foi removido).
 """
 import os
-import io
-import wave
-import struct
 import tempfile
 import subprocess
-import speech_recognition as sr
 from gtts import gTTS
 
 CODIGOS_VOZ = {
@@ -103,13 +102,19 @@ def transcrever_audio(audio_file, idioma_origem_id):
     Recebe ficheiro de audio (WAV preferido, webm/ogg com ffmpeg).
     Optimizado para voz normal — nao precisa de falar alto.
     """
+    try:
+        import speech_recognition as sr
+    except ImportError:
+        print('[Voz] speech_recognition nao disponivel neste ambiente')
+        return None
+
     recognizer = sr.Recognizer()
     # Sensibilidade maxima — capta voz normal/baixa
-    recognizer.energy_threshold = 100          # muito sensivel (padrao e 300)
-    recognizer.dynamic_energy_threshold = False # nao ajusta automaticamente
-    recognizer.pause_threshold = 0.8           # pausa entre frases
-    recognizer.phrase_threshold = 0.1          # minimo para considerar frase
-    recognizer.non_speaking_duration = 0.3     # silencio antes/depois
+    recognizer.energy_threshold = 100
+    recognizer.dynamic_energy_threshold = False
+    recognizer.pause_threshold = 0.8
+    recognizer.phrase_threshold = 0.1
+    recognizer.non_speaking_duration = 0.3
 
     codigo_sr, _ = _get_codigos(idioma_origem_id)
 
