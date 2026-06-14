@@ -1,7 +1,11 @@
-import psycopg2
+try:
+    import psycopg2 as pg
+except ImportError:
+    import psycopg as pg
+
 
 def conectar():
-    conexao = psycopg2.connect(
+    conexao = pg.connect(
         host="localhost",
         database="tradutor_bantu",
         user="postgres",

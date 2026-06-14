@@ -3,8 +3,8 @@
 
 set -o errexit   # para se houver erro
 
-pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 
 # Recolher ficheiros estáticos
 python manage.py collectstatic --no-input
